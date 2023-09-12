@@ -182,7 +182,7 @@ class DevelirySecondPage extends StatelessWidget {
                                   color: const Color(0xFFE5E5E5),
                                   borderRadius: BorderRadius.circular(8),
                                 ),
-                                child: Center(
+                                child: const Center(
                                   child: Text(
                                     "5 min",
                                     style: TextStyle(
@@ -237,8 +237,8 @@ class DevelirySecondPage extends StatelessWidget {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 8, right: 4),
+                                  const Padding(
+                                    padding: EdgeInsets.only(top: 8, right: 4),
                                     child: Text(
                                       "3.9",
                                       style: TextStyle(
