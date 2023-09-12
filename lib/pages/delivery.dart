@@ -106,15 +106,6 @@ class Delivery extends StatelessWidget {
                 ),
               ),
             ),
-
-            // Arrow SVG
-            Positioned(
-              top: 295,
-              left: 90,
-              child: SvgPicture.asset("assets/icons/arrow.svg"),
-            ),
-
-            // Call Icon
             Positioned(
               top: 404,
               left: 320,
