@@ -25,8 +25,8 @@ class _BookingDetailsState extends State<BookingDetails> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 22),
-              Text(
+              const SizedBox(height: 22),
+              const Text(
                 'Booking Details',
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -35,7 +35,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(height: 22),
+              const SizedBox(height: 22),
               buildNumberField(
                 "Sender's Phone Number ",
                 "Enter Sender's Phone Number ",
@@ -43,7 +43,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                   sPhone = number;
                 },
               ),
-              SizedBox(height: 22),
+              const SizedBox(height: 22),
               buildTextField(
                 "Receiver's Name",
                 "Enter Receiver's Name",
@@ -51,7 +51,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                   rName = text;
                 },
               ),
-              SizedBox(height: 22),
+              const SizedBox(height: 22),
               buildNumberField(
                 "Receiver's Phone Number",
                 "Enter Receiver's Phone Number",
@@ -59,8 +59,8 @@ class _BookingDetailsState extends State<BookingDetails> {
                   rPhone = number;
                 },
               ),
-              SizedBox(height: 316),
-              Container(
+              const SizedBox(height: 316),
+              SizedBox(
                 width: double.infinity,
                 height: 55,
                 child: ElevatedButton(
@@ -80,12 +80,12 @@ class _BookingDetailsState extends State<BookingDetails> {
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFF19305),
+                    backgroundColor: const Color(0xFFF19305),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
-                  child: Text(
+                  child: const Text(
                     "Continue",
                     style: TextStyle(
                       fontFamily: "Poppins",
@@ -122,12 +122,13 @@ class _BookingDetailsState extends State<BookingDetails> {
             alignment: Alignment.center,
             child: SvgPicture.asset(
               "assets/icons/arrowdown2.svg",
+              // ignore: deprecated_member_use
               color: Colors.black,
             ),
           ),
         ),
       ),
-      title: Padding(
+      title: const Padding(
         padding: EdgeInsets.all(0),
         child: Text(
           "Delivery",
@@ -150,14 +151,14 @@ class _BookingDetailsState extends State<BookingDetails> {
       children: [
         Text(
           label,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16,
             fontFamily: 'Poppins',
             fontWeight: FontWeight.w400,
             color: Color(0xFF475467),
           ),
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         TextField(
           cursorColor: Colors.black,
           onChanged: onChanged,
@@ -165,9 +166,9 @@ class _BookingDetailsState extends State<BookingDetails> {
             hintText: hint,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(color: Color(0xFFD0D5DD)),
+              borderSide: const BorderSide(color: Color(0xFFD0D5DD)),
             ),
-            focusedBorder: OutlineInputBorder(
+            focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(
                 color: Colors.black, // Change border color here
               ),
@@ -185,26 +186,26 @@ class _BookingDetailsState extends State<BookingDetails> {
       children: [
         Text(
           label,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16,
             fontFamily: 'Poppins',
             fontWeight: FontWeight.w400,
             color: Color(0xFF475467),
           ),
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         TextField(
           keyboardType: TextInputType.number,
           cursorColor: Colors.black,
           onChanged: onChanged,
           decoration: InputDecoration(
-            suffixIcon: Container(margin: EdgeInsets.all(10),child: SvgPicture.asset('assets/icons/user.svg')),
+            suffixIcon: Container(margin: const EdgeInsets.all(10),child: SvgPicture.asset('assets/icons/user.svg')),
             hintText: hint,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(color: Color(0xFFD0D5DD)),
+              borderSide: const BorderSide(color: Color(0xFFD0D5DD)),
             ),
-            focusedBorder: OutlineInputBorder(
+            focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(
                 color: Colors.black, // Change border color here
               ),

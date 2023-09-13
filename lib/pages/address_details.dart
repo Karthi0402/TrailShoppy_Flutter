@@ -6,6 +6,7 @@ class AddressDetails extends StatefulWidget {
   const AddressDetails({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _AddressDetailsState createState() => _AddressDetailsState();
 }
 
@@ -25,8 +26,8 @@ class _AddressDetailsState extends State<AddressDetails> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 22),
-              Text(
+              const SizedBox(height: 22),
+              const Text(
                 'Address Details',
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -35,7 +36,7 @@ class _AddressDetailsState extends State<AddressDetails> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(height: 22),
+              const SizedBox(height: 22),
               buildTextField(
                 "Pickup Address",
                 "Enter Pickup Address",
@@ -43,7 +44,7 @@ class _AddressDetailsState extends State<AddressDetails> {
                   pAddress = text;
                 },
               ),
-              SizedBox(height: 22),
+              const SizedBox(height: 22),
               buildTextField(
                 "Delivery Address",
                 "Enter Delivery Address",
@@ -51,7 +52,7 @@ class _AddressDetailsState extends State<AddressDetails> {
                   dAddress = text;
                 },
               ),
-              SizedBox(height: 22),
+              const SizedBox(height: 22),
               buildTextField(
                 "Package Contents",
                 "e.g. Food, Medicines",
@@ -59,8 +60,8 @@ class _AddressDetailsState extends State<AddressDetails> {
                   pContent = text;
                 },
               ),
-              SizedBox(height: 224),
-              Text(
+              const SizedBox(height: 224),
+              const Text(
                 "By confirming, I accept that the contents of this order do not include any illegal items. I understand that delivery partners may verify package contents and have the right to refuse the task if any concerns arise during verification.",
                 style: TextStyle(
                   fontFamily: "Poppins",
@@ -68,7 +69,7 @@ class _AddressDetailsState extends State<AddressDetails> {
                   color: Color(0xFF98A2B3),
                 ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Container(
                 width: double.infinity,
                 height: 55,
@@ -89,12 +90,12 @@ class _AddressDetailsState extends State<AddressDetails> {
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFF19305),
+                    backgroundColor: const Color(0xFFF19305),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
-                  child: Text(
+                  child: const Text(
                     "Continue",
                     style: TextStyle(
                       fontFamily: "Poppins",
@@ -118,14 +119,14 @@ class _AddressDetailsState extends State<AddressDetails> {
       children: [
         Text(
           label,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16,
             fontFamily: 'Poppins',
             fontWeight: FontWeight.w400,
             color: Color(0xFF475467),
           ),
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         TextField(
           cursorColor: Colors.black,
           onChanged: onChanged,
@@ -133,9 +134,9 @@ class _AddressDetailsState extends State<AddressDetails> {
             hintText: hint,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(color: Color(0xFFD0D5DD)),
+              borderSide: const BorderSide(color: Color(0xFFD0D5DD)),
             ),
-            focusedBorder: OutlineInputBorder(
+            focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(
                 color: Colors.black, // Change border color here
               ),
@@ -164,12 +165,13 @@ class _AddressDetailsState extends State<AddressDetails> {
             alignment: Alignment.center,
             child: SvgPicture.asset(
               "assets/icons/arrowdown2.svg",
+              // ignore: deprecated_member_use
               color: Colors.black,
             ),
           ),
         ),
       ),
-      title: Padding(
+      title: const Padding(
         padding: EdgeInsets.all(0),
         child: Text(
           "Delivery",

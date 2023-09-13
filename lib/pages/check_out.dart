@@ -3,7 +3,6 @@ import 'package:flutter_dash/flutter_dash.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_app/pages/delivery.dart';
 
-// Define your custom styles and constants
 class AppStyles {
   static const TextStyle titleTextStyle = TextStyle(
     fontSize: 16,
@@ -47,15 +46,15 @@ class _CheckOutState extends State<CheckOut> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 26),
-              Text("Bill Details", style: AppStyles.titleTextStyle),
+              const Text("Bill Details", style: AppStyles.titleTextStyle),
               const SizedBox(height: 22),
               buildLocationInfo(
-                color: Color(0xFF4CAF50),
+                color: const Color(0xFF4CAF50),
                 text: 'Vijay Complex, Bhavanipur Colony, Shas...',
               ),
               const SizedBox(height: 16),
               buildLocationInfo(
-                color: Color(0xFFED4C5C),
+                color: const Color(0xFFED4C5C),
                 text: 'Paradise Residency, Bhavanipur Colony, ...',
               ),
               const SizedBox(height: 16),
@@ -64,9 +63,10 @@ class _CheckOutState extends State<CheckOut> {
                 color: Color(0xFFCDCDCD),
               ),
               const SizedBox(height: 12),
-              Text("Tip the driver", style: AppStyles.tipTextStyle),
+              const Text("Tip the driver", style: AppStyles.tipTextStyle),
               const SizedBox(height: 8),
-              Container(
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
                     Padding(
@@ -117,7 +117,7 @@ class _CheckOutState extends State<CheckOut> {
               const Divider(
                 color: Color(0xFFCDCDCD),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Padding(
                 padding: const EdgeInsets.only(right: 20),
                 child: Container(
@@ -147,7 +147,7 @@ class _CheckOutState extends State<CheckOut> {
                 color: Color(0xFFF19305),
                 height: 0.5,
               ),
-              SizedBox(height: 17),
+              const SizedBox(height: 17),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -191,21 +191,19 @@ class _CheckOutState extends State<CheckOut> {
                   ),
                 ],
               ),
-              SizedBox(height: 16,),
+              const SizedBox(height: 16,),
               const Divider(
                 color: Color(0xFFF19305),
                 height: 0.5,
               ),
-              SizedBox(height: 17),
+              const SizedBox(height: 17),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     children: [
-                      Container(
-                        child:  SvgPicture.asset(
-                          "assets/icons/indianrupee.svg",
-                        ),
+                      SvgPicture.asset(
+                        "assets/icons/indianrupee.svg",
                       ),
                       const Padding(
                         padding: EdgeInsets.only(left: 8),
@@ -228,7 +226,7 @@ class _CheckOutState extends State<CheckOut> {
                   ),
                 ],
               ),
-              SizedBox(height: 40,),
+              const SizedBox(height: 40,),
               Container(
                 width: double.infinity,
                 height: 55,
@@ -242,7 +240,7 @@ class _CheckOutState extends State<CheckOut> {
                     
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFF19305),
+                    backgroundColor: const Color(0xFFF19305),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
@@ -295,7 +293,7 @@ class _CheckOutState extends State<CheckOut> {
             Text(
               "5km",
               style: AppStyles.regularTextStyle.copyWith(
-                color: Color(0xFF667085),
+                color: const Color(0xFF667085),
               ),
             ),
             const Padding(
@@ -310,7 +308,7 @@ class _CheckOutState extends State<CheckOut> {
             Text(
               "35-40 min Delivery",
               style: AppStyles.regularTextStyle.copyWith(
-                color: Color(0xFF667085),
+                color: const Color(0xFF667085),
               ),
             ),
           ],
@@ -324,10 +322,10 @@ class _CheckOutState extends State<CheckOut> {
       width: 46.0,
       height: 42.0,
       decoration: BoxDecoration(
-        color: Color(0xFFFFFFFF),
+        color: const Color(0xFFFFFFFF),
         borderRadius: BorderRadius.circular(8.0),
         border: Border.all(
-          color: Color(0xFFBBC1CC),
+          color: const Color(0xFFBBC1CC),
           width: 1.0,
         ),
       ),
@@ -363,6 +361,7 @@ class _CheckOutState extends State<CheckOut> {
             alignment: Alignment.center,
             child: SvgPicture.asset(
               "assets/icons/arrowdown2.svg",
+              // ignore: deprecated_member_use
               color: Colors.black,
             ),
           ),
